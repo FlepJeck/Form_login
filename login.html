@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="login.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <main>
+    <div id="container">
+      <form method="POST" autocomplete="false">
+        <div class="break"></div>
+        <input type="email" autocomplete="new-email" placeholder="Enter email" id="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+        <!--[(ngModel)]="email" [ngModelOptions]="{standalone: true}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required #emailInput="ngModel"-->
+        <!--<div class="show-error" *ngIf="emailInput.errors && emailInput.errors.required && emailInput.dirty">
+                <span>Email cant be empty</span>
+            </div>
+            <div class="show-error" *ngIf="emailInput.errors && emailInput.errors.pattern && emailInput.dirty">
+                <span>Wrong format email</span>
+            </div>-->
+        <input type="password" placeholder="Enter password" autocomplete="new-password" id="psw" required>
+        <!--[(ngModel)]="password" [ngModelOptions]="{standalone: true}" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required #passInput="ngModel"-->
+        <button type="button" id="login-btn" (click)="login()">SIGN IN</button><br />
+        <div class="last">
+          <!--<span><a href="/forgot-password" target="_blank">Forgot Password?</a></span><br />-->
+          <span><a class="reg" href='registration.html'>Registration</a></span><br />
+        </div>
+      </form>
+    </div>
+    <!--<div>
+        </div>-->
+  </main>
+</body>
+
+</html>
